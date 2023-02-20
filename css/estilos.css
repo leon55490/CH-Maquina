@@ -1,377 +1,381 @@
 * {
-  margin-top: .5em;
-  padding: 0;
-  box-sizing: border-box;
+	margin-top: 0.5em;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 :root {
-  --colorBtn: linear-gradient(#A7E9AF 11%, #75B79E 100%);
-  --windowBlack: #EEF9BF;
-  --windowWhite: #EEF9BF;
-  --circle: rgb(237, 232, 235);
+	--colorBtn: linear-gradient(to right, #e9c46a, #931f1d);
+	--windowBlack: #839d9a;
+	--windowWhite: #839d9a;
+	--circle: rgb(237, 232, 235);
 }
 
 html {
-  font-size: 62.5%;
-  color: black;
+	font-size: 62.5%;
+	color: black;
+	background-color: #839d9a;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(240)'%3E%3Cstop offset='0' stop-color='%23839D9A'/%3E%3Cstop offset='1' stop-color='%23404E5C'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='540' height='450' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.1'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+	background-attachment: fixed;
+	background-size: cover;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  background-size: cover;
-  background-position: center;
-  /* background: url(../assets/img/fondo.png), #7b4397; */
-  /* background: url(../assets/img/fondo.png),
-    linear-gradient(to left, #2b1f3b, #031424); */
+	font-family: 'Roboto', sans-serif;
+	background-size: cover;
+	background-position: center;
 }
 
 header {
-  width: 100vw;
-  height: 20%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px;
-  background-color: #75B79E;
+	width: 100vw;
+	height: 25%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 15px;
+	margin: 0px;
+	background-color: #404e5c;
 }
 
 .btno {
-  border: none;
-  color: white;
-  font-weight: bold;
-  box-shadow: 0px 4px 3px 2px rgb(0 0 0 / 16%);
+	border: none;
+	color: white;
+	font-weight: bold;
+	box-shadow: 0px 4px 3px 2px rgb(0 0 0 / 16%);
 }
 
 .ejecutar {
-  margin-left: 20px;
-  padding: 10px;
-  background-image: var(--colorBtn);
-  color: #031424;
-  border-radius: 5px;
-  margin-top: 5px;
-  display: none;
+	margin-left: 20px;
+	padding: 10px;
+	background-image: var(--colorBtn);
+	color: #031424;
+	border-radius: 5px;
+	margin-top: 5px;
+	display: none;
 }
 
 .ejecutar:hover {
-  color: #ddd;
-  box-shadow: 0 0 0 2px rgb(43, 224, 118)
+	color: #ddd;
+	box-shadow: 0 0 0 2px rgb(43, 224, 118);
 }
 
 .paso {
-  padding: 5px;
-  background-image: var(--colorBtn);
-  border-radius: 5px;
-  color: #031424;
-  cursor: pointer;
-  margin-left: 100px;
-  display: none;
+	padding: 5px;
+	background-image: var(--colorBtn);
+	border-radius: 5px;
+	color: #031424;
+	cursor: pointer;
+	margin-left: 100px;
+	display: none;
 }
 
 .paso:hover {
-  cursor: pointer;
-  color: white;
-  box-shadow: 0 0 0 2px rgb(43, 224, 118)
+	cursor: pointer;
+	color: white;
+	box-shadow: 0 0 0 2px rgb(43, 224, 118);
 }
 
 .state {
-  width: 40px;
-  padding: 5px;
-  border-radius: 50px;
-  cursor: pointer;
+	width: 40px;
+	padding: 5px;
+	border-radius: 50px;
+	cursor: pointer;
 }
 
 /* BOTONES DE ESTADO DE MAQUINA */
 #encender {
-  background-image: linear-gradient(135deg, #FFF720 10%, #3CD500 100%);
+	background-image: linear-gradient(135deg, #fff720 10%, #3cd500 100%);
 }
 
 #encender:hover {
-  background-image: linear-gradient(135deg, #EEF9BF 15%, #75B79E 100%);
+	background-image: linear-gradient(135deg, #eef9bf 15%, #75b79e 100%);
 }
 
 #apagar {
-  background-image: linear-gradient(135deg, #f7da4b 10%, #f56a6a 100%);
-  display: none;
+	background-image: linear-gradient(135deg, #f7da4b 10%, #f56a6a 100%);
+	display: none;
 }
 
 #apagar:hover {
-  background-image: linear-gradient(135deg, #EEF9BF 15%, #75B79E 100%);
+	background-image: linear-gradient(135deg, #eef9bf 15%, #75b79e 100%);
 }
 
 #addAlgoritm {
-  display: none;
+	display: none;
 }
 
 #informacion {
-  height: 50px;
-  width: 60px;
-  border-radius: 22px;
-  border: none;
-  background: linear-gradient(#A7E9AF 11%, #75B79E 100%);
+	height: 50px;
+	width: 60px;
+	border-radius: 22px;
+	border: none;
+	margin-left: 30px;
+	background: linear-gradient(to left, #525252, #3d72b4);
 }
 
 #informacion:hover {
-  background-image: linear-gradient(135deg, #EEF9BF 15%, #75B79E 100%);
+	background-image: linear-gradient(135deg, #eef9bf 15%, #75b79e 100%);
 }
 
 .fa-plus-square {
-  margin: 0;
-  color: black;
-  width: 100%;
-  height: 100%;
-  font-size: 35px;
-  opacity: 80%;
-  display: none;
+	margin: 0;
+	color: black;
+	width: 100%;
+	height: 100%;
+	font-size: 35px;
+	opacity: 80%;
+	display: none;
 }
 
 .fa-plus-square:hover {
-  opacity: 100%;
+	opacity: 100%;
 }
 
 .container-inicio {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
+	display: flex;
+	align-items: end;
+	justify-content: space-between;
 }
 
 .article {
-  position: relative;
-  background-color: #EEF9BF;
-  border-radius: 5px;
-  padding: 5px 30px;
-  height: 80%;
-  width: 90%;
-  margin-left: 10px;
-  margin-bottom: 20px;
+	position: relative;
+	background-color: #839d9a;
+	border-radius: 5px;
+	padding: 5px 30px;
+	height: 80%;
+	width: 90%;
+	margin-left: 10px;
+	margin-bottom: 20px;
 }
 
 .article p {
-  position: absolute;
-  top: -15px;
-  left: calc(50% - 44px);
-  font-size: 14px;
-  padding: 5px;
-  width: 90px;
-  border-radius: 15px;
-  color: #031424;
-  background-image: var(--colorBtn);
-  text-align: center;
-  font-weight: bold;
-
-
+	position: absolute;
+	top: -15px;
+	left: calc(50% - 44px);
+	font-size: 14px;
+	padding: 5px;
+	width: 90px;
+	border-radius: 15px;
+	color: #031424;
+	background-image: var(--colorBtn);
+	text-align: center;
+	font-weight: bold;
 }
 
 #variables span {
-  font-size: 1.4rem;
-  margin-bottom: 10px;
-  display: block;
+	font-size: 1.4rem;
+	margin-bottom: 10px;
+	display: block;
 }
 
 #etiquetas span {
-  font-size: 1.4rem;
-  margin-bottom: 10px;
-  display: block;
+	font-size: 1.4rem;
+	margin-bottom: 10px;
+	display: block;
 }
 
 .article input {
-  width: 50px;
-  border: none;
-  outline: none;
-  text-align: center;
-  font-size: 15px;
-  font-weight: 500;
-  left: 150px;
+	width: 50px;
+	border: none;
+	outline: none;
+	text-align: center;
+	font-size: 15px;
+	font-weight: 500;
+	left: 150px;
 }
 
 .article-container--input {
-  margin-top: 15px;
+	margin-top: 15px;
 }
 
 .show-memory button {
-  background-image: var(--colorBtn);
-  border-radius: 22px;
-  padding: 15px;
-  color: #031424;
-  cursor: pointer;
-  font-size: 13px;
+	background-image: var(--colorBtn);
+	border-radius: 22px;
+	padding: 15px;
+	color: #031424;
+	cursor: pointer;
+	font-size: 13px;
 }
 
 .show-memory button:hover {
-  background-image: linear-gradient(135deg, #EEF9BF 15%, #75B79E 100%);
+	background-image: linear-gradient(135deg, #eef9bf 15%, #75b79e 100%);
 }
 
 /* Segunda SECCION */
 
 main {
-  width: 100vw;
-  height: 74vh;
-  padding: 20px;
-  padding-bottom: 0px;
-  display: grid;
-  grid-template-columns: 75% 25%;
+	width: 100vw;
+	height: 74vh;
+	padding: 30px;
+	padding-bottom: 0px;
+	display: grid;
+	grid-template-columns: 40% 60%;
 }
 
 main .operations {
-  padding: 20px;
-  background-color: var(--windowWhite);
-  height: 90%;
-  position: relative;
+	padding: 20px;
+	background-color: var(--windowWhite);
+	height: 90%;
+	position: relative;
 }
 
 .operations p {
-  position: absolute;
-  font-family: "Roboto", sans-serif;
-  background-image: var(--colorBtn);
-  padding: 10px;
-  border-radius: 15px;
-  font-size: 15px;
-  top: -28px;
-  left: calc(50% - 45px);
-  color: #031424;
-  font-weight: 700;
+	position: absolute;
+	font-family: 'Roboto', sans-serif;
+	background-image: var(--colorBtn);
+	padding: 10px;
+	border-radius: 15px;
+	font-size: 15px;
+	top: -28px;
+	left: calc(50% - 45px);
+	color: #031424;
+	font-weight: 700;
 }
 
 .operaciones-texto {
-  width: 100%;
-  height: 400px;
-  margin-top: 10px;
-  background-color: transparent;
+	width: 100%;
+	height: 400px;
+	margin-top: 10px;
+	background-color: transparent;
 
-  border: none;
-  overflow: scroll;
-  color: black;
-  text-align: left;
-  font-size: 1.2rem;
-  font-family: "Courier New", Courier, monospace;
-  font-weight: bold;
+	border: none;
+	overflow: scroll;
+	color: black;
+	text-align: left;
+	font-size: 1.2rem;
+	font-family: 'Courier New', Courier, monospace;
+	font-weight: bold;
 }
 
 /* MONITOR CONTAINER */
 
 main .monitor-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
 }
 
 .monitor-container .container-interfaz {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
+	display: grid;
+	grid-template-rows: 1fr 1fr;
 }
 
 /*IMAGENES DE MONITOR Y IMPRESORA*/
 .monitor-container .monitor-container--img {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
+	display: grid;
+	grid-template-rows: 1fr 1fr;
 }
 
 .monitor-background {
-  margin-left: 5px;
-  display: flex;
-  position: relative;
-  background-color: var(--window);
-  font-family: "Courier New", Courier, monospace;
-  font-weight: 200;
-  width: 200px;
-  border-radius: 15px;
-  height: 120px;
+	margin-left: 5px;
+	display: flex;
+	position: relative;
+	/* background-color: var(--window); */
+	font-family: 'Courier New', Courier, monospace;
+	font-weight: 200;
+	width: 280px;
+	border-radius: 15px;
+	height: 250px;
+	background-image: url('./../Imagenes y documentacion/monitor.png');
+	/* background-attachment: fixed; */
+	background-size: cover;
 }
 
 .monitor-text {
-  margin-top: 18px;
-  margin-left: -24px;
-  width: 250px;
-  height: 109px;
-  color: black;
-  font-size: 1.2rem;
-  background-color: var(--windowBlack);
+	margin-top: 60px;
+	margin-left: 28px;
+	width: 250px;
+	height: 109px;
+	color: black;
+	font-size: 1.2rem;
+	/* background-color: white; */
 }
 
 .monitor-background button {
-  position: absolute;
-  bottom: -72px;
-  left: calc(50% - 40px);
+	position: absolute;
+	bottom: -72px;
+	left: calc(50% - 40px);
 }
 
 #monitor {
-  position: absolute;
-  left: 10px;
-  top: 10px;
-  width: 200px;
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	width: 200px;
 }
 
 .main-impresora {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 #printer {
-  width: 50%;
-  height: 40%;
-  align-self: center;
+	width: 50%;
+	height: 40%;
+	align-self: center;
 }
 
 .impresora-texto {
-  background-color: var(--windowWhite);
-  color: black;
-  margin: 0 6px;
-  width: 95%;
-  height: 97px;
-  border-radius: 5px;
-  font-size: 12px;
-  font-family: "Courier New", Courier, monospace;
-  padding: 5px;
+	background-color: var(--windowWhite);
+	color: black;
+	margin: 0 6px;
+	width: 95%;
+	height: 97px;
+	border-radius: 5px;
+	font-size: 12px;
+	font-family: 'Courier New', Courier, monospace;
+	padding: 5px;
 }
 
 /* MEMORIA */
 
 .container-memory {
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  height: 100%;
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+	height: 100%;
 }
 
 .container-memory button {
-  background-image: var(--colorBtn);
-  padding: 15px;
-  border-radius: 15px;
-  color: #031424;
-  margin: 10px;
-  cursor: pointer;
-  display: none;
+	background-image: var(--colorBtn);
+	padding: 15px;
+	border-radius: 15px;
+	color: #031424;
+	margin: 10px;
+	cursor: pointer;
+	display: none;
 }
 
 .container-memory button:hover {
-  color: #ddd;
-  box-shadow: 0 0 0 2px rgb(237, 232, 235);
+	color: #ddd;
+	box-shadow: 0 0 0 2px rgb(237, 232, 235);
 }
 
 #memoria {
-  width: 100%;
-  height: 378px;
-  margin-top: 20px;
-  background-color: var(--windowWhite);
-  border-radius: 5px;
-  font-size: 12px;
-  font-family: "Courier New", Courier, monospace;
-  padding: 5px;
-  overflow: scroll;
-  display: none;
-  color: black;
+	width: 100%;
+	height: 378px;
+	margin-top: 20px;
+	background-color: var(--windowWhite);
+	border-radius: 5px;
+	font-size: 12px;
+	font-family: 'Courier New', Courier, monospace;
+	padding: 5px;
+	overflow: scroll;
+	display: none;
+	color: black;
 }
 
 #variables {
-  overflow: scroll;
-  color: black;
-  height: 190px;
-  padding-top: 10px;
+	overflow: scroll;
+	color: black;
+	height: 190px;
+	padding-top: 10px;
 }
 
 #etiquetas {
-  overflow: scroll;
-  color: black;
-  height: 190px;
-  padding-top: 10px;
+	overflow: scroll;
+	color: black;
+	height: 190px;
+	padding-top: 10px;
 }
 
 /* footer {
@@ -415,5 +419,5 @@ main .monitor-container {
 } */
 
 ::-webkit-scrollbar {
-  display: none;
+	display: none;
 }

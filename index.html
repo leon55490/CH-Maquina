@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHMaquina DavidRt</title>
+    <title>CHMaquina DavidRT</title>
     <!-- CSS -->
     <link rel="stylesheet" href="css\estilos.css">
     <link rel="stylesheet" href="css\fontello.css">
@@ -13,16 +13,7 @@
 
 <body>
     <header>
-        <div>
-            <form name="myForm">
-                <input type="file" name="myInput" accept=".ch" multiple id="files" disabled class="text-white" />
-            </form>
-            <button class="btno state" id="encender" onclick="encender()"><span class="icon-off"></span></button>
-            <button class="btno state" id="apagar" onclick="apagar()"><span class="icon-power-outline"></span></button>
-            <button class="btno ejecutar" id="correrPrograma" onclick="ejecutarPrograma()">Ejecutar Programa</button>
-            <button class="btno paso" id="stepByStep" onclick="ejecutarPasoAPaso()">Paso a paso</button>
-
-        </div>
+        
         <div style="display: flex;">
             <div class="d-flex flex-row me-5">
                 <div class="container-algotimthms input-group mb-5 d-flex">
@@ -63,26 +54,48 @@
                     </div>
                 </div>
             </form>
+            <button id="informacion" title="Información Usuario">
+                <a href="info.html">
+                    <span class="icon-info"></span>
+                </a>
+            </button>
         </div>
 
         <div class="show-memory">
             <button class="btno" id="moMemoria" onclick="moMemoria()">Mostrar Memoria</button>
         </div>
-        <button id="informacion" title="Información Usuario">
-            <a href="info.html">
-                <span class="icon-info"></span>
-            </a>
-        </button>
+        
+        
+
+        <div>
+            <form name="myForm">
+                <input type="file" name="myInput" accept=".ch" multiple id="files" disabled class="text-white" />
+            </form>
+            <button class="btno state" id="encender" onclick="encender()"><span class="icon-off"></span></button>
+            <button class="btno state" id="apagar" onclick="apagar()"><span class="icon-power-outline"></span></button>
+            <button class="btno ejecutar" id="correrPrograma" onclick="ejecutarPrograma()">Ejecutar Programa</button>
+            <button class="btno paso" id="stepByStep" onclick="ejecutarPasoAPaso()">Paso a paso</button>
+            
+        </div>
     </header>
     <!-- -----------------MAIN------------------------   -->
     <!--    OPERATIONS -->
     <main>
+        
+        <section class="operations">
+            <p class="btno">Operaciones</p>
+            <div class="operaciones-texto" id="instrucciones">
+                <!-- como instrucciones -->
+
+            </div>
+        </section>
+
         <!--VARIABLES Y ETIQUETAS,  monitor imporesora y muestra de memoria -->
         <section class="monitor-container">
             <!-- Monitor e Impresora -->
             <div class="monitor-container--img">
                 <div class="monitor-background">
-                    <p class="btno">Monitor</p>
+                    <!-- <p class="btno">Monitor</p> -->
                     <div class="monitor-text" id="monitor-result">El resultado es:</div>
                     <button disabled id="modo">Modo kernel</button>
                 </div>
@@ -108,13 +121,6 @@
                 </div>
             </div>
 
-        </section>
-        <section class="operations">
-            <p class="btno">Operaciones</p>
-            <div class="operaciones-texto" id="instrucciones">
-                <!-- como instrucciones -->
-
-            </div>
         </section>
     </main>
 
@@ -143,8 +149,6 @@
             <!-- <h3>RLP</h3> -->
             <div id="rlp"></div>
         </div>
-
-
     </footer>
     <!-- <script src="./js/acomulator.js"></script> -->
     <script src="js\statePage.js"></script>
