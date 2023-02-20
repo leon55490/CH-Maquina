@@ -114,7 +114,7 @@ header {
 }
 
 #informacion:hover {
-	background-image: linear-gradient(135deg, #eef9bf 15%, #75b79e 100%);
+	background-image: linear-gradient(to right, #b92b27, #1565c0);
 }
 
 .fa-plus-square {
@@ -198,7 +198,7 @@ header {
 }
 
 .show-memory button:hover {
-	background-image: linear-gradient(135deg, #eef9bf 15%, #75b79e 100%);
+	background-image: linear-gradient(to right, #525252, #3d72b4);
 }
 
 /* Segunda SECCION */
