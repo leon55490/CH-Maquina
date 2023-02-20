@@ -1,17 +1,17 @@
 let memoria = [];
 let listaArchivos = [];
-var numVar = 0; //Es contador que cuenta las "VARIABLES" que hay por archivo
+let numVar = 0; //Es contador que cuenta las "VARIABLES" que hay por archivo
 
 let contPasoApaso = 0;
 let acumStepbyStep = 0;
 let nextFile = 0;
-var sum = 0;
+let sum = 0;
 
 var arrayVariables = [];
 var instrucciones = [];
 
 // De izquierda a derecha en la interfaz
-var file = document.getElementById('files');
+let file = document.getElementById('files');
 let btnEncender = document.getElementById('encender');
 let btnApagar = document.getElementById('apagar');
 
@@ -19,7 +19,7 @@ let kernel = document.getElementById('kernel');
 let memoriaInput = document.getElementById('memoria-input');
 let inputAcumulador = document.getElementById('acumulador');
 let acomulador = inputAcumulador.value;
-var ejecutar = document.getElementById('correrPrograma'); //nuevo
+let ejecutar = document.getElementById('correrPrograma'); //nuevo
 let divMemoria = document.getElementById('memoria');
 
 // variables del contenedor footer
@@ -147,4 +147,3 @@ function showMemory(varChange, lista, acum) {
 		inputAcumulador.value = acum;
 	}
 }
-// console.log(CEP);
