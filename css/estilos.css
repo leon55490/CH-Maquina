@@ -234,7 +234,7 @@ main .operations {
 
 .operaciones-texto {
 	width: 100%;
-	height: 400px;
+	height: 95%;
 	margin-top: 10px;
 	background-color: transparent;
 
@@ -292,7 +292,7 @@ main .monitor-container {
 
 .monitor-background button {
 	position: absolute;
-	bottom: -72px;
+	bottom: -46px;
 	left: calc(50% - 40px);
 }
 
@@ -309,7 +309,7 @@ main .monitor-container {
 }
 
 #printer {
-	width: 50%;
+	width: 40%;
 	height: 40%;
 	align-self: center;
 }
@@ -378,45 +378,45 @@ main .monitor-container {
 	padding-top: 10px;
 }
 
-/* footer {
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr 1fr 1fr 1fr;
-  grid-auto-flow: column;
-  overflow: scroll;
-  width: 69%;
-  height: 62px;
-  background-color: var(--windowBlack);
-  margin: 0 20px;
-  margin-top: 5px;
-  border-radius: 15px;
-  color: aliceblue;
-} */
+footer {
+	display: grid;
+	grid-template-columns: 1fr 3fr 1fr 1fr 1fr 1fr;
+	grid-auto-flow: column;
+	overflow: scroll;
+	width: 69%;
+	height: 35px;
+	background-color: var(--windowBlack);
+	margin: 0 20px;
+	margin-top: 5px;
+	border-radius: 15px;
+	color: aliceblue;
+}
 
-/* #footer-container-title {
-  height: auto;
-  margin-right: 10px;
-  color: #3cd500;
-  background-color: var(--windowWhite);
-  font-weight: bold;
-  font-size: 14px;
-  text-align: center;
-  vertical-align: center;
-  border-radius: 15px;
-} */
+#footer-container-title {
+	height: auto;
+	margin-right: 10px;
+	color: #3cd500;
+	background-color: var(--windowWhite);
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+	vertical-align: center;
+	border-radius: 15px;
+}
 
-/* .footer-container-row {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
+.footer-container-row {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 
-/* .footer-container-row h3 {
-  width: 90%;
-  color: #3cd500;
-  border-bottom: 1px solid green;
-  text-align: center;
-  font-size: small;
-} */
+.footer-container-row h3 {
+	width: 90%;
+	color: #3cd500;
+	border-bottom: 1px solid green;
+	text-align: center;
+	font-size: small;
+}
 
 ::-webkit-scrollbar {
 	display: none;
