@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHMaquina DavidRt</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css\estilos.css">
+    <link rel="stylesheet" href="css\fontello.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <form name="myForm">
+                <input type="file" name="myInput" accept=".ch" multiple id="files" disabled class="text-white" />
+            </form>
+            <button class="btno state" id="encender" onclick="encender()"><span class="icon-off"></span></button>
+            <button class="btno state" id="apagar" onclick="apagar()"><span class="icon-power-outline"></span></button>
+            <button class="btno ejecutar" id="correrPrograma" onclick="ejecutarPrograma()">Ejecutar Programa</button>
+            <button class="btno paso" id="stepByStep" onclick="ejecutarPasoAPaso()">Paso a paso</button>
+
+        </div>
+        <div style="display: flex;">
+            <div class="d-flex flex-row me-5">
+                <div class="container-algotimthms input-group mb-5 d-flex">
+                    <label class="input-group-text" for="inputGroupSelect01">Algoritmo</label>
+                    <select class="form-select" id="inputGroupSelect01">
+                        <option value="fcfs">FCFS</option>
+                        <option value="sjf">SJF</option>
+                        <option value="srtn">SRTN</option>
+                        <option value="prioridad">Prioridad</option>
+                    </select>
+                </div>
+            </div>
+
+            <form class="container-inicio" id="forma" onsubmit="return false">
+                <div class="article">
+                    <p class="btno text-center"> Quantum</p>
+                    <div class="article-container--input">
+                        <input type="number" id="q" name="q" value="0">
+                    </div>
+                </div>
+                <div class="article">
+                    <p class="btno">Kernel</p>
+                    <div class="article-container--input">
+                        <input type="number" id="kernel" name="kernel" min="59" max="5009" value="59">
+                    </div>
+                </div>
+                <div class="article">
+                    <p class="btno">Memoria</p>
+                    <div class="article-container--input">
+                        <input type="number" name="memoria" id="memoria-input" min="100" max="5009" value="100">
+
+                    </div>
+                </div>
+                <div class="article">
+                    <p class="btno">Acumulador</p>
+                    <div class="article-container--input">
+                        <input type="number" name="acumulador" id="acumulador" value="0" disabled='false'>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="show-memory">
+            <button class="btno" id="moMemoria" onclick="moMemoria()">Mostrar Memoria</button>
+        </div>
+        <button id="informacion" title="Información Usuario">
+            <a href="info.html">
+                <span class="icon-info"></span>
+            </a>
+        </button>
+    </header>
+    <!-- -----------------MAIN------------------------   -->
+    <!--    OPERATIONS -->
+    <main>
+        <!--VARIABLES Y ETIQUETAS,  monitor imporesora y muestra de memoria -->
+        <section class="monitor-container">
+            <!-- Monitor e Impresora -->
+            <div class="monitor-container--img">
+                <div class="monitor-background">
+                    <p class="btno">Monitor</p>
+                    <div class="monitor-text" id="monitor-result">El resultado es:</div>
+                    <button disabled id="modo">Modo kernel</button>
+                </div>
+                <div class="main-impresora">
+                    <img id="printer" src="Imagenes y documentacion\printer.png" alt="impresora">
+                    <div class="impresora-texto" id="impresora-result">Resultado:</div>
+                </div>
+            </div>
+            <!-- Muestra Memoria -->
+            <div class="container-memory">
+                <div id="memoria">
+                </div>
+                <button class="btno" id="cerrar" onclick="cerrarDiv()">Cerrar</button>
+            </div>
+            <div class="container-interfaz">
+                <div class="article" id="variable">
+                    <p class="btno">Variable</p>
+                    <div id="variables"></div>
+                </div>
+                <div class="article" id="tag">
+                    <p class="btno">Etiqueta</p>
+                    <div id="etiquetas"></div> <!-- Como etiquetas -->
+                </div>
+            </div>
+
+        </section>
+        <section class="operations">
+            <p class="btno">Operaciones</p>
+            <div class="operaciones-texto" id="instrucciones">
+                <!-- como instrucciones -->
+
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer-home" style="position: fixed;">
+        <div class="footer-container-row">
+            <!-- <h3>ID</h3> -->
+            <div id="idColumn"></div>
+        </div>
+        <div class="footer-container-row">
+            <!-- <h3>Programa</h3> -->
+            <div id="programa"></div>
+        </div>
+        <div class="footer-container-row">
+            <!-- <h3>=Ins</h3> -->
+            <div id="ins"></div>
+        </div>
+        <div class="footer-container-row">
+            <!-- <h3>RB</h3> -->
+            <div id="rb"></div>
+        </div>
+        <div class="footer-container-row">
+            <!-- <h3>RLC</h3> -->
+            <div id="rlc"></div>
+        </div>
+        <div class="footer-container-row">
+            <!-- <h3>RLP</h3> -->
+            <div id="rlp"></div>
+        </div>
+
+
+    </footer>
+    <!-- <script src="./js/acomulator.js"></script> -->
+    <script src="js\statePage.js"></script>
+    <script src="js\Nueva.js"></script>
+    <script src="js\Etiqueta.js"></script>
+    <script src="js\ArchivosCH.js"></script>
+    <script src="js\procesarArchivo.js"></script>
+    <script src="js\verificarSintaxis.js"></script>
+    <script src="js\planificacionAlgoritmos.js"></script>
+    <script src="js\roundRobin.js"></script>
+    <script src="js\runSrtn.js"></script>
+    <script src="js\correrArchivo.js"></script>
+    <script src="js\stepByStep.js"></script>
+    <script src="js\app.js"></script>
+</body>
+
+</html>
