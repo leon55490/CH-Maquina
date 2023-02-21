@@ -57,10 +57,18 @@ let contCPU = 0; //el conteo de las demás instrucciones excluyendo las declarat
 
 file.addEventListener('change', leerArchivo);
 
+/**
+ * It makes the divMemoria visible and the cerrar visible.
+ */
 function moMemoria() {
 	divMemoria.style.display = 'block';
 	cerrar.style.display = 'inline-block';
 }
+/**
+ * When the user clicks on the button with the id of 'cerrar', the div with the id of
+ * 'divMemoria' will be hidden, and the button with the id of 'cerrar' will be hidden as
+ * well.
+ */
 function cerrarDiv() {
 	divMemoria.style.display = 'none';
 	cerrar.style.display = 'none';
