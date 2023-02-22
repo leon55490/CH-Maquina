@@ -1,3 +1,8 @@
+/**
+ * It checks if the syntax of the code is correct.
+ * @param lista - is the list of instructions
+ * @returns An array of strings.
+ */
 function verificarSintaxis(lista) {
 	let errores = [];
 
