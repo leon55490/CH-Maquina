@@ -1,3 +1,7 @@
+/**
+ * If the value of the memory input is greater than 9999, then alert the user that the memory
+ * is insufficient, and then turn off the computer.
+ */
 function encender() {
 	if (Number(memoriaInput.value) > 9999) {
 		alert('EL ESPACIO DE MEMORIA ES INSUFICIENTE');
