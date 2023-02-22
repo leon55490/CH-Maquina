@@ -7,8 +7,8 @@ let acumStepbyStep = 0;
 let nextFile = 0;
 let sum = 0;
 
-var arrayVariables = [];
-var instrucciones = [];
+let arrayVariables = [];
+let instrucciones = [];
 
 // De izquierda a derecha en la interfaz
 let file = document.getElementById('files');
@@ -74,10 +74,20 @@ function cerrarDiv() {
 	cerrar.style.display = 'none';
 }
 
+/**
+ * A function that is called when the user clicks on a button.
+ */
 function ejecutarPasoAPaso() {
 	stepByStep(acumStepbyStep, filesCH, contPasoApaso);
 }
 
+/**
+ * If the number is less than the width, add zeros to the left of the number until it is the
+ * width.
+ * @param number - The number to pad.
+ * @param width - The total length of the output string.
+ * @returns A string.
+ */
 function zeroFill(number, width) {
 	width -= number.toString().length;
 	if (width > 0) {
@@ -85,10 +95,11 @@ function zeroFill(number, width) {
 	}
 	return number + ''; // always return a string
 }
-// let CEP=0
+
+/**
+ * It runs the program.
+ */
 function ejecutarPrograma() {
-	// console.log('entra al ejecutar programa');
-	// console.log(`acomulador input${acomulador}`);
 	if (inputMetodoAlgoritm.value === 'RR' || inputMetodoAlgoritm.value === 'RRP') {
 		roundRobin(filesCH, Number(inputQuantum.value));
 	} else if (inputMetodoAlgoritm.value === 'srtn') {
@@ -96,13 +107,17 @@ function ejecutarPrograma() {
 	} else {
 		correrArchivo(acomulador, filesCH);
 	}
-	// CEP++;
 	ejecutar.style.display = 'none';
 }
 
+/**
+ * It takes a variable name, a list of variables, and an accumulator value, and it updates
+ * the accumulator value and the memory display
+ * @param varChange - The variable that changed
+ * @param lista - is the object that contains the variables and their values
+ * @param acum - is the accumulator
+ */
 function showMemory(varChange, lista, acum) {
-	//entra el [2]
-	// debugger
 	console.log(lista);
 	if (lista !== undefined) {
 		for (l of lista.variables) {

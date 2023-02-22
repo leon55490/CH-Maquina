@@ -1,3 +1,4 @@
+/* This class is a blueprint for creating objects that store data. */
 class Nueva {
 	constructor(id, nombre, tipo, valor, idPrograma) {
 		this._id = id;

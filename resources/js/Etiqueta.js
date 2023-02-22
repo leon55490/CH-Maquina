@@ -1,3 +1,5 @@
+/* Etiqueta is a class that has a constructor that takes three parameters, and has four
+getters and four setters. */
 class Etiqueta {
 	static contadorEtiqueta = 0;
 	constructor(nombre, valor, sobrepasa) {
