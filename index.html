@@ -13,9 +13,9 @@
 
 <body>
     <header>
-        
+
         <div style="display: flex;">
-            <div class="d-flex flex-row me-5" style="display:none">
+            <div class="d-flex flex-row me-5">
                 <div class="container-algotimthms input-group mb-5 d-flex">
                     <label class="input-group-text" for="inputGroupSelect01">Algoritmo</label>
                     <select class="form-select" id="inputGroupSelect01">
@@ -28,7 +28,7 @@
             </div>
 
             <form class="container-inicio" id="forma" onsubmit="return false">
-                <div class="article" style=" display:none">
+                <div class="article">
                     <p class="btno text-center">Quantum</p>
                     <div class="article-container--input">
                         <input type="number" id="q" name="q" value="0">
@@ -59,8 +59,8 @@
         <div class="show-memory">
             <button class="btno" id="moMemoria" onclick="moMemoria()">Mostrar Memoria</button>
         </div>
-        
-        
+
+
 
         <div>
             <form name="myForm">
@@ -70,13 +70,13 @@
             <button class="btno state" id="apagar" onclick="apagar()"><span class="icon-power-outline"></span></button>
             <button class="btno ejecutar" id="correrPrograma" onclick="ejecutarPrograma()">Ejecutar Programa</button>
             <button class="btno paso" id="stepByStep" onclick="ejecutarPasoAPaso()">Paso a paso</button>
-            
+
         </div>
     </header>
     <!-- -----------------MAIN------------------------   -->
     <!--    OPERATIONS -->
     <main>
-        
+
         <section class="operations">
             <p class="btno">Operaciones</p>
             <div class="operaciones-texto" id="instrucciones">
@@ -121,27 +121,27 @@
 
     <footer id="footer-home" style="position: fixed; display:none">
         <div class="footer-container-row">
-            
+
             <div id="idColumn"></div>
         </div>
         <div class="footer-container-row">
-           
+
             <div id="programa"></div>
         </div>
         <div class="footer-container-row">
-            
+
             <div id="ins"></div>
         </div>
         <div class="footer-container-row">
-           
+
             <div id="rb"></div>
         </div>
         <div class="footer-container-row">
-           
+
             <div id="rlc"></div>
         </div>
         <div class="footer-container-row">
-           
+
             <div id="rlp"></div>
         </div>
     </footer>
