@@ -1,11 +1,14 @@
 /**
- * It takes an array of objects, each object representing a file, and it executes the
- * instructions in each file, one by one, until it reaches the end of the file.
- * @param filesCH - is an array of objects that contain the information of the files that are
- * going to be executed.
- * @param quantum - the number of instructions to execute before switching to the next
- * process
- * @returns An array of objects.
+ * The function implements the Round Robin scheduling algorithm for a set of files with
+ * assembly code.
+ * @param filesCH - An array of objects representing the files to be executed in the Round
+ * Robin scheduling algorithm. Each object contains information about the file, including its
+ * name, lines of code, variables, and labels.
+ * @param quantum - The time quantum or time slice, which is the maximum amount of time a
+ * process is allowed to run in a preemptive multitasking system before being interrupted and
+ * moved to the back of the queue. In this code, it is used to determine the number of
+ * instructions to execute before switching to the next process
+ * @returns an array with the modified filesCH object.
  */
 filesStateList = [];
 quantumCounter = 0;

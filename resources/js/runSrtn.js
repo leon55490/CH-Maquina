@@ -1,9 +1,10 @@
 /**
- * It's a function that runs a program that is written in a language that is similar to
- * assembly language.
- * @param filesCH - is an array of objects that contain the information of the files that are
- * going to be executed.
- * @returns an array of objects.
+ * The function `runSrtn` executes a set of instructions for multiple programs in a
+ * non-preemptive manner.
+ * @param filesCH - An array of objects representing the files to be executed. Each object
+ * contains information about the file, such as its name, lines of code, variables, and
+ * labels.
+ * @returns an array with the updated `filesCH` array.
  */
 filesStateList = [];
 function runSrtn(filesCH) {

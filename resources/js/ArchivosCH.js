@@ -1,4 +1,5 @@
-/* ArchivosCH is a class that represents a file that is going to be executed by the CPU. */
+/* The class ArchivosCH represents a file with its properties such as name, memory
+allocation, arrival time, priority, and CPU usage. */
 class ArchivosCH {
 	static contadorId = 0;
 	constructor(

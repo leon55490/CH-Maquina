@@ -1,5 +1,5 @@
-/* Etiqueta is a class that has a constructor that takes three parameters, and has four
-getters and four setters. */
+/* The class Etiqueta defines a template for creating objects with properties such as id,
+name, value, and whether it exceeds a certain limit. */
 class Etiqueta {
 	static contadorEtiqueta = 0;
 	constructor(nombre, valor, sobrepasa) {

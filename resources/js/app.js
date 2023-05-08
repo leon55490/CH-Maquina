@@ -1,3 +1,7 @@
+/**
+ * This is a JavaScript function that includes various functionalities for executing and
+ * displaying the memory of a program.
+ */
 let memoria = [];
 let listaArchivos = [];
 let numVar = 0; //Es contador que cuenta las "VARIABLES" que hay por archivo
@@ -58,16 +62,15 @@ let contCPU = 0; //el conteo de las demás instrucciones excluyendo las declarat
 file.addEventListener('change', leerArchivo);
 
 /**
- * It makes the divMemoria visible and the cerrar visible.
+ * The function displays a div element and sets the display property of another element to
+ * inline-block.
  */
 function moMemoria() {
 	divMemoria.style.display = 'block';
 	cerrar.style.display = 'inline-block';
 }
 /**
- * When the user clicks on the button with the id of 'cerrar', the div with the id of
- * 'divMemoria' will be hidden, and the button with the id of 'cerrar' will be hidden as
- * well.
+ * The function hides a div and a button.
  */
 function cerrarDiv() {
 	divMemoria.style.display = 'none';
@@ -75,18 +78,20 @@ function cerrarDiv() {
 }
 
 /**
- * A function that is called when the user clicks on a button.
+ * The function executes a step-by-step process using input files and a counter.
  */
 function ejecutarPasoAPaso() {
 	stepByStep(acumStepbyStep, filesCH, contPasoApaso);
 }
 
 /**
- * If the number is less than the width, add zeros to the left of the number until it is the
- * width.
- * @param number - The number to pad.
- * @param width - The total length of the output string.
- * @returns A string.
+ * The function adds leading zeros to a number to make it a certain width.
+ * @param number - The number that needs to be zero-filled to the specified width.
+ * @param width - The width parameter is the total number of digits that the resulting string
+ * should have, including the digits of the original number. The function pads the original
+ * number with leading zeros to achieve the desired width.
+ * @returns a string with the given number padded with zeros on the left to meet the
+ * specified width.
  */
 function zeroFill(number, width) {
 	width -= number.toString().length;
@@ -95,9 +100,8 @@ function zeroFill(number, width) {
 	}
 	return number + ''; // always return a string
 }
-
 /**
- * It runs the program.
+ * The function executes a program based on the selected algorithm and input parameters.
  */
 function ejecutarPrograma() {
 	if (inputMetodoAlgoritm.value === 'RR' || inputMetodoAlgoritm.value === 'RRP') {
@@ -107,15 +111,19 @@ function ejecutarPrograma() {
 	} else {
 		correrArchivo(acomulador, filesCH);
 	}
+
 	ejecutar.style.display = 'none';
 }
 
 /**
- * It takes a variable name, a list of variables, and an accumulator value, and it updates
- * the accumulator value and the memory display
- * @param varChange - The variable that changed
- * @param lista - is the object that contains the variables and their values
- * @param acum - is the accumulator
+ * The function "showMemory" logs a list of variables, updates the value of a variable in a
+ * list of files, and displays the contents of memory in an HTML element.
+ * @param varChange - The name of the variable that has been changed and needs to be updated
+ * in the memory display.
+ * @param lista - The "lista" parameter is an object that contains information about
+ * variables and their values. It is used in the function to update the values of variables
+ * in the "listaArchivos" array.
+ * @param acum - The current value of the accumulator in a computer program.
  */
 function showMemory(varChange, lista, acum) {
 	console.log(lista);
@@ -143,7 +151,7 @@ function showMemory(varChange, lista, acum) {
 		arrayMemoria.push(lAcumulador);
 		for (let s = 1; s <= Number(memoriaInput.value); s++) {
 			if (s <= kernel.value) {
-				arrayMemoria.push(`${s} Usado Por El Sistema`);
+				arrayMemoria.push(`${s} USE FOR SYSTEM`);
 			} else if (s > kernel.value && s <= suma) {
 				let commentIndexMemory = listaArchivos[contador].findIndex(
 					(comment) => comment == '//'

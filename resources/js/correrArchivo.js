@@ -1,10 +1,10 @@
 /**
- * It runs the code of the file that is passed as a parameter.
- * </code>
- * @param acumulador - the accumulator, which is the variable that holds the result of the
- * operations.
- * @param filesCH - is an array of objects that contain the information of the files that are
- * going to be executed.
+ * The function runs a series of instructions from a list of files and updates the
+ * accumulator and memory accordingly.
+ * @param acumulador - The current value of the accumulator, which is a register in a
+ * computer's CPU that stores intermediate results during arithmetic and logic operations.
+ * @param filesCH - An array of objects representing the files to be executed. Each object
+ * contains the following properties:
  */
 function correrArchivo(acumulador, filesCH) {
 	btnStepbyStep.style.display = 'none';

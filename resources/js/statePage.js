@@ -1,6 +1,6 @@
 /**
- * If the value of the memory input is greater than 9999, then alert the user that the memory
- * is insufficient, and then turn off the computer.
+ * The function "encender" initializes the system by disabling certain inputs, setting the
+ * mode to user, creating an array of memory with a limit, and displaying it on the page.
  */
 function encender() {
 	if (Number(memoriaInput.value) > 9999) {
@@ -28,7 +28,7 @@ function encender() {
 		if (i <= Number(kernel.value)) {
 			let so = [i];
 
-			so.push('Ocupado Por El Sistema');
+			so.push('USE FOR SYSTEM');
 			memoriaMostrar.push(so.toString().replaceAll(',', ' '));
 		} else {
 			memoriaMostrar.push(`${i} - - - - `);
@@ -45,6 +45,10 @@ function encender() {
 	document.getElementById('memoria').innerHTML = memoriaMostrar.join('<br></br>');
 }
 
+/**
+ * The function "apagar" reloads the page and enables certain elements while disabling
+ * others.
+ */
 function apagar() {
 	location.reload();
 	kernel.disabled = false;

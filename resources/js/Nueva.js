@@ -1,4 +1,5 @@
-/* This class is a blueprint for creating objects that store data. */
+/* The class "Nueva" has properties for id, nombre, tipo, valor, and idPrograma, along with
+getters and setters for each property. */
 class Nueva {
 	constructor(id, nombre, tipo, valor, idPrograma) {
 		this._id = id;

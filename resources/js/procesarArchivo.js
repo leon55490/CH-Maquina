@@ -1,18 +1,19 @@
+/**
+ * This function reads and processes a file input, checking for syntax errors and organizing
+ * the data into arrays for display in the interface.
+ * @param evento - The event object that is passed when the "leerArchivo" function is called.
+ * It contains information about the event that triggered the function, such as the files
+ * that were selected by the user.
+ */
 filesCH = [];
-var initialPosition = 0;
+let initialPosition = 0;
 let listaEtiquetas = []; //Lista para etiquetas para Mostrar en el div
 let archivoSolo = [];
 
-/**
- * It reads the file and stores it in a variable
- * @param evento - The event object.
- */
 function leerArchivo(evento) {
 	let archivoCH = new ArchivosCH();
 	let TiAnterior = 0;
 
-	/* The above code is reading the file that the user uploads and then it is going to process
-  it. */
 	for (let i = 0; i < evento.target.files.length; i++) {
 		document.getElementById('instrucciones').innerHTML = '';
 		document.getElementById('variables').innerHTML = '';
@@ -25,7 +26,8 @@ function leerArchivo(evento) {
 		archivoCH.ipMemory = initialPosition;
 		archivoCH.name = name;
 
-		/* The above code is reading the file that the user uploads and then it is processing it. */
+		//GUARDA EL NOMBRE DEL ARCHIVO A CARGAR
+
 		procesarArchivo(archivo, function (result) {
 			let lArchivo = []; //LINEAS PERO SIN ID
 
@@ -41,6 +43,10 @@ function leerArchivo(evento) {
 					lArchivo.splice(i, 1);
 					i--;
 				}
+				// if(lArchivo[i].includes('//')) {
+				//   lArchivo.splice(i,1);
+				//   i--;
+				// }
 			}
 
 			let listaPrueba = []; //LISTA DE LOS ARCHIVOS ORGANIZADOS CON EL ID QUE APARECE EN LA INTERFAZ
@@ -146,6 +152,7 @@ function leerArchivo(evento) {
 
 			arrayVariablesFile = [];
 			arrayEtiquetasFile = [];
+			//Array de variables en FileCH
 			archivoCH.lineas = listaFile;
 
 			sumArchivo = archivoCH.lineas.length;
@@ -219,6 +226,7 @@ function leerArchivo(evento) {
 			numVar = arrayVariables.length;
 			sum = sum + +sumArchivo + numVar;
 
+			// console.log(sum);
 			console.log(`Sum es = ${sum} y kernel es = ${kernel.value}`);
 
 			if (bool.length === 0 && sum + Number(kernel.value) <= Number(memoriaInput.value)) {
@@ -229,6 +237,7 @@ function leerArchivo(evento) {
 						}
 					}
 				}
+				//sin id, con variables, y archivos
 			} else {
 				if (sum + Number(kernel.value) > Number(memoriaInput.value)) {
 					alert(`Error: se excede el espacio de memoria`);
@@ -294,7 +303,7 @@ function leerArchivo(evento) {
 			arrayMemoria.push(lAcumulador);
 			for (let s = 1; s <= Number(memoriaInput.value); s++) {
 				if (s <= kernel.value) {
-					arrayMemoria.push(`${s} CHSO_V2021`);
+					arrayMemoria.push(`${s} USE FOR SYSTEM`);
 				} else if (s > kernel.value && s <= suma) {
 					let commentIndex = lFinal[contador].findIndex((comment) => comment == '//');
 					if (commentIndex !== -1) {
@@ -313,7 +322,11 @@ function leerArchivo(evento) {
 				mostrarOperaciones.push(string);
 			}
 
+			// console.log(arrayMemoria);
+			// document.getElementById('memoria').innerHTML = arrayMemoria.join('<br></br>');
 			instrucciones = arrayMemoria.slice(+kernel.value + 1, +suma + 1);
+
+			//Mostrar operaciones en el contenedor sin comas
 
 			let listaVariables = [];
 
@@ -336,6 +349,13 @@ function leerArchivo(evento) {
 			// FUNCION QUE ORDENA LOS ALGORITMOS DEPENDIENDO LO QUE SE ESCOJA
 			ordenarAlgoritmos(filesCH, algoritmToUse, Number(inputQuantum.value));
 
+			// Seguimiento de variables en contenedor MEMORIA
+
+			//ARRAY DE INTERFAZ
+
+			// Agrega en el footer las lineas
+			// id
+			// console.log(filesCH);
 			listId.push(zeroFill(numId, 3));
 			numId++;
 			//PRGRAMA
@@ -386,12 +406,7 @@ function leerArchivo(evento) {
 		});
 	}
 }
-/**
- * It reads the contents of a file and calls a callback function with the contents of the
- * file as a string
- * @param ch - The file object.
- * @param callback - The function to call when the file has been read.
- */
+
 function procesarArchivo(ch, callback) {
 	var reader = new FileReader();
 	reader.readAsText(ch);

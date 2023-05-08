@@ -1,10 +1,13 @@
 /**
- * It's a function that executes the instructions of a program line by line.
- * </code>
- * @param acumulador - the accumulator
- * @param filesCH - is an array of objects that contains the information of the files that
- * are loaded in the program.
- * @param contadorPasoAPaso - is the line number of the file that is being executed
+ * The function executes a step-by-step simulation of a program's code, displaying each
+ * instruction and its result.
+ * @param acumulador - The accumulator variable used in the code.
+ * @param filesCH - An array of objects representing the files of the CH assembly language
+ * program. Each object contains the name of the file, an array of lines of code, an array of
+ * variables declared in the file, and an array of labels declared in the file.
+ * @param contadorPasoAPaso - It is a variable that keeps track of the current line of code
+ * being executed in a program. It is used in the function `stepByStep` to execute the
+ * program line by line.
  */
 function stepByStep(acumulador, filesCH, contadorPasoAPaso) {
 	let file = filesCH[nextFile];
@@ -19,7 +22,6 @@ function stepByStep(acumulador, filesCH, contadorPasoAPaso) {
 		let unSpace = file.lineas[contadorPasoAPaso].toString().replaceAll(',', ' ');
 		confirm(`La instruccion es ${unSpace}`);
 	} else if (file.lineas[contadorPasoAPaso][1].toLowerCase() == 'lea') {
-		//Preguntar al Profe
 		for (let variable = 0; variable < file.variables.length; variable++) {
 			if (file.lineas[contadorPasoAPaso][2] == file.variables[variable].nombre) {
 				let newValue = prompt(
@@ -250,15 +252,15 @@ function stepByStep(acumulador, filesCH, contadorPasoAPaso) {
 	} else if (file.lineas[contadorPasoAPaso][1].toLowerCase() == 'muestre') {
 		if (file.lineas[contadorPasoAPaso][2].toUpperCase().trim() == 'ACUMULADOR') {
 			monitor.innerHTML = `El resultado del(os)
-                programas(${file.name}) 
-                (${file.lineas[contadorPasoAPaso][2]})
-                 es: ${acumulador}`;
+			programas(${file.name}) 
+			(${file.lineas[contadorPasoAPaso][2]})
+			 es: ${acumulador}`;
 		} else {
 			for (muestre of file.variables) {
 				if (file.lineas[contadorPasoAPaso][2].trim() == muestre.nombre) {
 					monitor.innerHTML = `El resultado del(os)
-                            programas(${file.name}) 
-                            (${file.lineas[contadorPasoAPaso][2]}) es igual a --> ${muestre.valor}`;
+						programas(${file.name}) 
+						(${file.lineas[contadorPasoAPaso][2]}) es igual a --> ${muestre.valor}`;
 				}
 			}
 		}
@@ -268,15 +270,15 @@ function stepByStep(acumulador, filesCH, contadorPasoAPaso) {
 	} else if (file.lineas[contadorPasoAPaso][1].toLowerCase() == 'imprima') {
 		if (file.lineas[contadorPasoAPaso][2].toUpperCase().trim() == 'ACUMULADOR') {
 			impresora.innerHTML = `El resultado del(os)
-                programas(${file.name}) 
-                (${file.lineas[contadorPasoAPaso][2]})
-                 es: ${acumulador}`;
+			programas(${file.name}) 
+			(${file.lineas[contadorPasoAPaso][2]})
+			 es: ${acumulador}`;
 		} else {
 			for (muestre of file.variables) {
 				if (file.lineas[contadorPasoAPaso][2].trim() == muestre.nombre) {
 					impresora.innerHTML = `El resultado del(os)
-                            programas(${file.name}) 
-                            (${file.lineas[contadorPasoAPaso][2]}) es igual a --> ${muestre.valor}`;
+						programas(${file.name}) 
+						(${file.lineas[contadorPasoAPaso][2]}) es igual a --> ${muestre.valor}`;
 				}
 			}
 		}
